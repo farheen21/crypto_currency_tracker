@@ -1,11 +1,12 @@
 import React from "react";
-import {BrowserRouter , Route} from 'react-router-dom';
-import CoinDetailPage from "./Pages/CoinDetailPage";
-import CoinSummaryPage from "./Pages/CoinSummaryPage";
+import { BrowserRouter, Route } from "react-router-dom";
+import CoinDetailPage from "./pages/CoinDetailPage";
+import CoinSummaryPage from "./pages/CoinSummaryPage";
+import Header from "./components/Header";
+import "./App.css";
+import { WatchListContextProvider } from "./context/watchListContext";
 
-
-
-function App() {
+const App = () => {
   return (
     <div className="container">
       <WatchListContextProvider>
@@ -17,6 +18,6 @@ function App() {
       </WatchListContextProvider>
     </div>
   );
-}
+};
 
 export default App;
